@@ -1,37 +1,59 @@
-# A Tic Tac Toe Bot 
+# Tic-Tac-Toe AI Bots
 
-![tictactoe](https://user-images.githubusercontent.com/29514438/89706167-c3120200-d980-11ea-8fdc-b3593c004ea4.png)
+A clean and professional Tic-Tac-Toe repository that includes:
 
-This is the code repository for my article on Medium - [Playing Games with Python - Tic Tac Toe](https://towardsdatascience.com/lets-beat-games-using-a-bunch-of-code-part-1-tic-tac-toe-1543e981fec1), where I have tried to take the famous Tic-Tac-Toe game and create a bot proficient enough to beat human players, if not the game itself.
+- Human vs Human gameplay.
+- Human vs AI gameplay using the Minimax algorithm.
+- Pre-trained state-value files for reinforcement-learning experiments.
 
-## What's inside this repo?
-- A fully playable Tic-Tac-Toe environment.
-- A bot trained using Temporal Difference learning (A technique in Reinforcement learning). 
-- A bot trained using the Minimax Algorithm.
+## Project Overview
 
-## How to use
+This repository demonstrates different ways to implement Tic-Tac-Toe in Python. It is designed for learning and experimentation with game-playing algorithms, particularly the Minimax strategy for unbeatable AI moves.
 
-### Play against the RL bot
-run ``` python testing_(HumanvsAI)_ReinforcementLearning.py```
+## Included Files
 
-### Play against the Minimax bot
-run ``` python HumanvsAI_Minimax.py```
+- `HumanvsAI_Minimax.py` — Play against a Minimax-based AI opponent.
+- `HumanvsHuman.py` — Two-player Tic-Tac-Toe for human vs human matches.
+- `trained_state_values_O.txt` — Saved state values for the O player from reinforcement-learning experiments.
+- `trained_state_values_X.txt` — Saved state values for the X player from reinforcement-learning experiments.
+- `FUNDING.yml` — GitHub funding metadata.
 
-### Play against another human player (Regular tic tac toe)
-run ``` python HumanvsHuman.py```
+## Features
 
-## Training the RL Bot
-Out of the two implementations, only the RL bot needs to train in order to reach proficiency. It does so by play 1v1 with another RL bot sharing the same state values in order to learn to beat itself and eventually become better. The `num_iterations` parameter controls the number of games that will be played among the bots.
+- Console-based Tic-Tac-Toe gameplay.
+- AI opponent using Minimax decision making.
+- Easy-to-use interface with numbered board positions.
+- Reusable game logic for further algorithm experiments.
 
-run ```python training_(AIvsAI)_ReinforcementLearning.py```
+## How to Run
 
-## Testing the two bots by making them play among themselves
-I wrote anotherr script in order to see which bot performed better in very brutal 1v1 fashion. The `num_iterations` parameter controls the number of games that will be played among both the bots.
+Make sure Python is installed, then run one of the following commands from the project folder.
 
-run ```python Showdown_Minimax_vs_RL.py```
+### Play against the Minimax AI
 
-## To Try
-- [x] Minimax Algorithm
-- [x] Temporal Difference Learning
-- [ ] Q Learning
-- [ ] Genetic Algorithms
+```bash
+python HumanvsAI_Minimax.py
+```
+
+### Play against another human player
+
+```bash
+python HumanvsHuman.py
+```
+
+## Gameplay Notes
+
+- The board positions are entered as numbers 1 through 9.
+- In `HumanvsAI_Minimax.py`, the AI plays optimally using the Minimax algorithm.
+- In `HumanvsHuman.py`, two human players alternate turns until a win or draw occurs.
+
+## Recommended Improvements
+
+- Add a dedicated Reinforcement Learning training script.
+- Create a graphical user interface (GUI).
+- Add unit tests for game logic and state validation.
+
+## License
+
+This project is provided for learning and experimentation. Feel free to adapt it for your own GitHub portfolio.
+
